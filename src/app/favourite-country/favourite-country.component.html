@@ -1,0 +1,6 @@
+<div class="favourite-container">
+    <h2 class="favourite-name">Favourite</h2>
+    <div class="favourite" *ngFor="let country of favoriteCountries">
+        <app-country-component [country]="country"/>
+    </div>
+</div>

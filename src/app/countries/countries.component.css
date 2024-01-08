@@ -1,0 +1,23 @@
+.countries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 24px;
+  column-gap: 48px;
+  margin-right: 270px;
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.search {
+  margin-right: 270px;
+  padding-bottom: 48px;
+  display: flex;
+  justify-content: start;
+  gap: 24px;
+}
+
+.input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+}

@@ -1,0 +1,20 @@
+<div><h1 [innerHTML]="'Selected books'" class="mt-10 text-center text-4xl"></h1></div>
+<div class="relative h-80 bg-white rounded-lg shadow-md p-4">
+  <table class="min-w-full">
+    <thead>
+    <tr class="text-left">
+      <th class="py-2 px-4 border-b">Title</th>
+      <th class="py-2 px-4 border-b">Authors</th>
+      <th class="py-2 px-4 border-b">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let book of selectedBooks">
+      <td class="py-2 px-4 border-b">{{ book.title | uppercase }}</td>
+      <td class="py-2 px-4 border-b">{{ book.authors | sort }}</td>
+      <td class="py-2 px-4 border-b">{{ book.price | currency:'USD' }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

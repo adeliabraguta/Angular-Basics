@@ -1,0 +1,25 @@
+.favourite-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0 32px;
+    border-left: 1px solid #747bff;
+    height: 100vh;
+    width: 200px;
+    overflow: scroll;
+    direction: rtl;
+    overflow-x: hidden;
+    background-color: #242424;
+}
+
+.favourite {
+    display: grid;
+    gap: 48px;
+    direction: ltr;
+}
+
+.favourite-name {
+    text-align: center;
+    padding-top: 32px;
+    margin-top: 0;
+}

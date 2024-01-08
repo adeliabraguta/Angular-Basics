@@ -1,0 +1,17 @@
+<div class="country" >
+  <img class="img" src="{{country.flags.png}}"/>
+
+  <div class="fav">
+    <p>{{country.name.common}}</p>
+
+      <span
+              class="btn-favourite"
+              (click)="toggleFavorite(country)"
+      >
+      <ng-container *ngIf="isFavorite(country); else notFavorite">
+        ❌
+      </ng-container>
+      <ng-template #notFavorite>❤️</ng-template>
+    </span>
+  </div>
+</div>

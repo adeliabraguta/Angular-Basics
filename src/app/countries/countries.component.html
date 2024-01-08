@@ -1,0 +1,10 @@
+<div>
+  <div class="search">
+    <input class="input" type="search" [(ngModel)]="searchCountry" placeholder="Search Country">
+  </div>
+  <div class="countries">
+    <div *ngFor="let country of myData$  | search: searchCountry">
+      <app-country-component [country]="country"/>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container mx-auto py-4">
+  <div class="grid grid-cols-3 gap-4">
+    <div *ngFor="let book of books">
+      <app-book
+        (bookRemove)="onBookRemoved($event)"
+        (bookSelect)="onBookSelected($event)"
+        [book]="book">
+      </app-book>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="selectedBooks.length" class="container mx-auto py-4">
+  <app-selected-books [selectedBooks]="selectedBooks"></app-selected-books>
+</div>
+
+
+
+
+
+
+
+

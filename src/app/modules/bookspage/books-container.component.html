@@ -1,0 +1,30 @@
+<div class="flex justify-center items-center mt-2">
+  <div class="flex space-x-4">
+    <input
+      [(ngModel)]="searchInput"
+      class="border border-gray-300 px-4 py-2"
+      name="searchInput"
+      type="text"
+    />
+    <button
+      (click)="onSearchClicked()"
+      [disabled]="!searchInput"
+      [ngClass]="{'bg-gray-300 hover:bg-gray-300' : !searchInput}"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4">
+      Search
+    </button>
+    <button
+      (click)="setValue()"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4">
+      Set Value
+    </button>
+  </div>
+</div>
+<div *ngIf="showSearchInputValue" class="flex justify-center items-center mt-2">
+  <div class="text-green-500 text-4xl">
+    {{ searchInput }}
+  </div>
+</div>
+<app-books-list></app-books-list>
+
+
